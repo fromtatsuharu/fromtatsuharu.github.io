@@ -1,0 +1,227 @@
+html { scroll-behavior: smooth;
+
+}
+
+h2, h3, h4, nav-item, #transition, footer {
+    text-align: center;
+
+}
+
+/* ******************** HEADER *******************  */
+
+.collapse {
+    margin-left: 4%;
+
+}
+.nav-item {
+    color: black;
+    font-weight: bold;
+    padding-right: 45px;
+}
+
+header {
+    background: url(media/main.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    height: 100vh;  /* virtual height = % de l'écran */
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 4.5em;
+    padding: 310px 0 0;
+    text-align: center;
+    text-shadow: -3px 3px 2px #F8D8E8;
+    animation: titre ease 2.5s;
+
+}
+@keyframes titre {
+    0%{
+        opacity: 0;
+        transform: translateY(380px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* *********************** LEFT PART *********************** */
+#leftPart {
+    background-color: #F8D8E8;
+    border-radius: 20px;
+    padding: 25px;
+}
+.elements {
+    padding: 50px 0;
+}
+.elements img {
+    border-radius: 50%;
+    width: 200px;
+}
+.elements p {  
+    font-size: 1.2em;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical;    /* sur mes txt je veux que seulement 4 lignes apparaissent*/
+    -webkit-line-clamp: 4;
+    overflow: hidden;  /* je cache ce qui dépasse */
+    padding: 20px;
+}
+
+.elements .button {
+    text-align: right;
+    margin: 15px 4% 0 0;
+}
+
+/* *************************** RIGHT PART *********************** */
+#rightPart {
+    background-color: #DB9681;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.tips {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+
+}
+
+.tips h4 {
+    position: relative;
+    color: #d1d8e0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 1px 1px 0 black, 1px -1px 0 black, 1px -1px 0 
+    black, 1px -1px 0 black, 1px -1px 0 black, 1px -1px 0;
+}
+
+.tips:hover {
+    transform: scale(1.08);
+    opacity: 0.7;
+    transition: ease-out 0.2s;
+}
+
+/* ********************* TRANSITION BRANCHE ***********************  */
+
+#transition {
+padding: 50px 0;
+
+}
+
+#transition img {
+    
+    -webkit-animation: rotate-center 5000ms cubic-bezier(0.755, 0.050, 0.855, 0.060) 4 both;
+        animation: rotate-center 5000ms cubic-bezier(0.755, 0.050, 0.855, 0.060) 4 both;
+    }
+
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+  /* ************************************* NEWSLETTER ******************** */
+  #newsletter {
+    background: url(./media/newsletter.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    height: 370px;
+    width: 70%;
+    min-width: 450px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 70px;
+
+  }
+  
+  #newsletter h4 {
+    margin-top: 15px;
+    padding: 100px 0 20px 0;
+    font-size: 2em;
+    text-shadow: 1px 1px 0 black, 1px -1px 0 black, 1px -1px 0 
+    black, 1px -1px 0 black, 1px -1px 0 black, 1px -1px 0;
+
+  }
+  #newsletter .input-group {
+    width: 40%;
+    min-width: 350px;
+    margin: 0 auto;
+
+  }
+
+  footer {
+    background-color: #F8D8E8;
+    padding: 10px 0 4px 0;
+    
+  }
+  
+  /* *************************** MEDIA QUERIES *************************** */
+
+   @media screen and (max-width: 990px) {
+    #rightPart {
+        display: flex;
+    }
+    #rightPart h2 {
+        display: none;
+    }
+    .tips {
+        height: 130px;
+        width: 130px;
+    }
+
+    }
+
+    @media screen and (max-width: 790px) {
+        h1 {
+            font-size: 3em;
+        }
+        .elements {
+            padding: 30px 0;
+        }
+        .elements img {
+            max-width: 140px;
+            margin-top: 40px;
+        }
+        #transition img {
+            width: 250px;
+        }
+        .tips {
+            height: 90px;
+            width: 90px;
+        }
+        .tips h4 {
+            font-size: 0.9em;
+        }
+    }
+
+    @media screen and (max-width: 580px) {
+        .elements {
+            padding: 15px 0;
+            text-align: center;
+
+        }
+        .elements img {
+            margin-bottom: 10px;
+        }
+        nav {
+            display: none;
+        }
+    }
+        
+  
+
